@@ -240,11 +240,11 @@ console.log(getArtistByIndex(artists,0))
 
 function get20s(array){
 
-  let century =[];
-
+  let century =[];  
+   
   for (let i=0; i<array.length; i++){
-  if(array[i].includes(19**&&20**)){    
-  century.push(array[i]);
+  if (array[i].years.slice(0,5)>1900&&array[i].years.slice(8,11)<2000){    
+  century.push(array[i].name);
   }
   }
   return century
@@ -309,8 +309,8 @@ function lotsOfArt(array){
 
   let moreThanHundred = []   
   for (let i=0; i<array.length; i++)  
-  if(array[i].includes(this.paintings) && this.paintings > 100){
-  moreThanHundred.push(array[i]);    
+  if(array[i].paintings > 100){
+  moreThanHundred.push(array[i].name);    
   }
   return moreThanHundred
 }
